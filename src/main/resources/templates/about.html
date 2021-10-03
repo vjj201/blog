@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="_fragments :: head(~{::title},~{::meta})">
+    <title>關於我</title>
+    <meta name="description" content="自我介紹">
+</head>
+
+<body>
+
+    <!-- 導航 -->
+    <nav th:replace="_fragments :: nav(5)"></nav>
+    <!-- 導航結束 -->
+
+
+    <!-- 中間內容 -->
+    <div class="m-padded-tb-big m-container">
+        <div class="ui container">
+            <div class="ui stackable grid">
+
+                <!-- 左邊圖像 -->
+                <div class="eleven wide column">
+                    <div class="ui segment"><img src="https://picsum.photos/id/40/800/600" alt=""
+                            class="ui rounded image"></div>
+                </div>
+                <!-- 右邊關於 -->
+                <div class="five wide column">
+                    <div class="ui top attached segment">
+                        <div class="ui header">關於我</div>
+                    </div>
+
+                    <div class="ui attached segment">
+                        <p class="m-text">
+                            Yucheng，熱愛咖啡美食，因緣際會，踏上轉職工程師之路，希望可以結交共同成長的夥伴
+                        </p>
+                        <p class="m-text">
+                            主學Java語言，苦讀後端網頁服務編程中
+                        </p>
+                    </div>
+
+                    <div class="ui attached segment">
+                        <div class="ui orange basic label">程式</div>
+                        <div class="ui orange basic label">咖啡</div>
+                        <div class="ui orange basic label">電影</div>
+                        <div class="ui orange basic label">玩具</div>
+                        <div class="ui orange basic label">購物</div>
+                    </div>
+
+                    <div class="ui attached segment">
+                        <div class="ui teal basic label m-margin-top-tiny">Java</div>
+                        <div class="ui teal basic label m-margin-top-tiny">Spring</div>
+                        <div class="ui teal basic label m-margin-top-tiny">MySQL</div>
+                        <div class="ui teal basic label m-margin-top-tiny">JavaScript</div>
+                        <div class="ui teal basic label m-margin-top-tiny">HTML</div>
+                        <div class="ui teal basic label m-margin-top-tiny">CSS</div>
+                        <div class="ui teal basic label m-margin-top-tiny">JSP</div>
+                        <div class="ui teal basic label m-margin-top-tiny">JQuery</div>
+                        <div class="ui teal basic label m-margin-top-tiny">Shiro</div>
+                    </div>
+
+                    <div class="ui bottom attached segment">
+                        <a href="#" class="ui circular icon button"><i class="github icon"></i></a>
+                        <a href="#" class="ui circular icon button"><i class="facebook icon"></i></a>
+                        <a href="#" class="ui circular icon button"><i class="instagram icon"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 中間內容結束 -->
+
+
+    <!-- 頁尾 -->
+    <footer th:replace="_fragments :: footer"></footer>
+    <!-- 頁尾結束 -->
+
+    <!-- semantic-ui -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+
+    <!-- 手機端選單 -->
+    <script>
+        $('.menu.toggle').click(function () {
+            $('.m-item').toggleClass('m-mobile-hide');
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="admin/_fragments :: head(~{::title}, ~{::meta})">
+        <title>Blog分類新增</title>
+        <meta name="description" content="Blog分類新增">
+</head>
+
+<body>
+
+    <!-- 導航 -->
+    <nav th:replace="admin/_fragments :: nav(2)"></nav>
+
+    <div class="ui attached pointing menu">
+        <div class="ui container">
+            <div class="right menu">
+                <a href="#" th:href="@{/admin/types/input}" class="active item">新增</a>
+                <a href="#" th:href="@{/admin/types}" class="item">列表</a>
+            </div>
+        </div>
+    </div>
+    <!-- 導航結束 -->
+
+
+    <!-- 中間內容 -->
+    <div class="m-padded-tb-large m-container">
+        <div class="ui container">
+            <!-- 提交表單 -->
+            <form class="ui form" action="#" th:action="@{/admin/types/{id}(id=*{id})}" method="POST" th:object="${type}">
+<!--<input class="hidden" name="id" th:value="*{id}">-->
+
+                <!-- 分類 -->
+                <div class="field">
+                    <div class="ui left labeled input">
+                        <label class="ui teal basic label">名稱</label>
+                        <input type="text" name="name" placeholder="分類名稱" th:value="*{name}">
+                    </div>
+                </div>
+
+
+                <!-- 錯誤提示 -->
+                <div class="ui error message"></div>
+
+
+                <div class="ui negative message" th:if="${#fields.hasErrors('name')}">
+                    <i class="close icon"></i>
+                    <div class="header">驗證失敗</div>
+                    <p th:errors="*{name}">提交訊息不符合規定</p>
+                </div>
+
+
+
+
+                <!-- 提交選項 -->
+                <div class="ui right aligned container">
+                    <button type="button" class="ui button" onclick="window.history.go(-1)">返回</button>
+                    <button type="submit" class="ui teal submit button">提交</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- 中間內容結束 -->
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+    <!-- 頁尾 -->
+    <footer th:replace="admin/_fragments :: footer"></footer>
+    <!-- 頁尾結束 -->
+
+    <!-- semantic-ui -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+
+    <script>
+        //手機端選單
+        $('.menu.toggle').click(function () {
+            $('.m-item').toggleClass('m-mobile-hide');
+        })
+
+        //下拉框顯示
+        $('.ui.dropdown').dropdown({ on: 'hover' });
+
+        //表單驗證
+        $('.ui.form').form({
+            fields: {
+                title: {
+                    identifier: 'name',
+                    rules: [{
+                        type: 'empty',
+                        prompt: '請輸入分類名稱'
+                    }]
+                }
+            }
+        });
+
+        //消息關閉
+        $('.message .close').on('click', function () {
+            $(this).closest('.message').transition('fade');
+        });
+    </script>
+</body>
+
+</html>

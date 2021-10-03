@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="_fragments :: head(~{::title},~{::meta})">
+    <title>歷年文章</title>
+    <meta name="description" content="文章發布時間順序">
+</head>
+
+<body>
+
+    <!-- 導航 -->
+    <nav th:replace="_fragments :: nav(4)"></nav>
+    <!-- 導航結束 -->
+
+
+    <!-- 中間內容 -->
+    <div class="m-padded-tb-large m-container">
+        <div class="ui cotainer">
+            <!-- 時序標題 -->
+            <div class="ui top attached segment">
+                <div class="ui middle alignedd two column grid">
+                    <div class="column">
+                        <h3 class="ui teal header">時序</h3>
+                    </div>
+                    <div class="right aligned column">
+                        共<h2 class="ui orange header m-inline-block m-text-thin">12</h2>篇文章
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="ui center aligned header">2019</h2>
+            <!-- 年分 -->
+            <div class="ui fluid vertical menu">
+                <!-- 時序文章列 -->
+                <a href="#" target="_blanck" class="item">
+                    <span>
+                        <i class="mini teal circle icon"></i>&nbsp&nbsp創意發想清單
+                        <div class="ui teal basic left pointing label m-padded-mini">10月06</div>
+                    </span>
+
+                    <div class="ui orange basic left pointing label m-padded-mimi">原創</div>
+                </a>
+
+                <a href="#" target="_blanck" class="item">
+                    <span>
+                        <i class="mini teal circle icon"></i>&nbsp&nbsp專題架構圖
+                        <div class="ui teal basic left pointing label m-padded-mini">10月11</div>
+                    </span>
+
+                    <div class="ui orange basic left pointing label m-padded-mimi">原創</div>
+                </a>
+
+                <a href="#" target="_blanck" class="item">
+                    <span>
+                        <i class="mini teal circle icon"></i>&nbsp&nbsp意式咖啡配方
+                        <div class="ui teal basic left pointing label m-padded-mini">12月01</div>
+                    </span>
+
+                    <div class="ui orange basic left pointing label m-padded-mimi">轉發</div>
+                </a>
+
+                <a href="#" target="_blanck" class="item">
+                    <span>
+                        <i class="mini teal circle icon"></i>&nbsp&nbsp當月新歌精選
+                        <div class="ui teal basic left pointing label m-padded-mini">12月12</div>
+                    </span>
+
+                    <div class="ui orange basic left pointing label m-padded-mimi">翻譯</div>
+                </a>
+            </div>
+
+            <h2 class="ui center aligned header">2020</h2>
+            <!-- 年分 -->
+            <div class="ui fluid vertical menu">
+                <!-- 時序文章列 -->
+                <a href="#" target="_blanck" class="item">
+                    <span>
+                        <i class="mini teal circle icon"></i>&nbsp&nbsp創意發想清單
+                        <div class="ui teal basic left pointing label m-padded-mini">10月06</div>
+                    </span>
+
+                    <div class="ui orange basic left pointing label m-padded-mimi">原創</div>
+                </a>
+
+                <a href="#" target="_blanck" class="item">
+                    <span>
+                        <i class="mini teal circle icon"></i>&nbsp&nbsp專題架構圖
+                        <div class="ui teal basic left pointing label m-padded-mini">10月11</div>
+                    </span>
+
+                    <div class="ui orange basic left pointing label m-padded-mimi">原創</div>
+                </a>
+
+                <a href="#" target="_blanck" class="item">
+                    <span>
+                        <i class="mini teal circle icon"></i>&nbsp&nbsp意式咖啡配方
+                        <div class="ui teal basic left pointing label m-padded-mini">12月01</div>
+                    </span>
+
+                    <div class="ui orange basic left pointing label m-padded-mimi">轉發</div>
+                </a>
+
+                <a href="#" target="_blanck" class="item">
+                    <span>
+                        <i class="mini teal circle icon"></i>&nbsp&nbsp當月新歌精選
+                        <div class="ui teal basic left pointing label m-padded-mini">12月12</div>
+                    </span>
+
+                    <div class="ui orange basic left pointing label m-padded-mimi">翻譯</div>
+                </a>
+            </div>
+
+            <h2 class="ui center aligned header">2021</h2>
+            <!-- 年分 -->
+            <div class="ui fluid vertical menu">
+                <!-- 時序文章列 -->
+                <a href="#" target="_blanck" class="item">
+                    <span>
+                        <i class="mini teal circle icon"></i>&nbsp&nbsp創意發想清單
+                        <div class="ui teal basic left pointing label m-padded-mini">10月06</div>
+                    </span>
+
+                    <div class="ui orange basic left pointing label m-padded-mimi">原創</div>
+                </a>
+
+                <a href="#" target="_blanck" class="item">
+                    <span>
+                        <i class="mini teal circle icon"></i>&nbsp&nbsp專題架構圖
+                        <div class="ui teal basic left pointing label m-padded-mini">10月11</div>
+                    </span>
+
+                    <div class="ui orange basic left pointing label m-padded-mimi">原創</div>
+                </a>
+
+                <a href="#" target="_blanck" class="item">
+                    <span>
+                        <i class="mini teal circle icon"></i>&nbsp&nbsp意式咖啡配方
+                        <div class="ui teal basic left pointing label m-padded-mini">12月01</div>
+                    </span>
+
+                    <div class="ui orange basic left pointing label m-padded-mimi">轉發</div>
+                </a>
+
+                <a href="#" target="_blanck" class="item">
+                    <span>
+                        <i class="mini teal circle icon"></i>&nbsp&nbsp當月新歌精選
+                        <div class="ui teal basic left pointing label m-padded-mini">12月12</div>
+                    </span>
+
+                    <div class="ui orange basic left pointing label m-padded-mimi">翻譯</div>
+                </a>
+            </div>
+
+        </div>
+    </div>
+    <!-- 中間內容結束 -->
+
+
+    <!-- 頁尾 -->
+    <footer th:replace="_fragments :: footer"></footer>
+    <!-- 頁尾結束 -->
+
+    <!-- semantic-ui -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+
+    <!-- 手機選單 -->
+    <script>
+        $('.menu.toggle').click(function () {
+            $('.m-item').toggleClass('m-mobile-hide');
+        })
+    </script>
+</body>
+
+</html>

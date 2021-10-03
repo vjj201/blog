@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="_fragments :: head(~{::title},~{::meta})">
+    <title>分類頁</title>
+    <meta name="description" content="文章分類">
+</head>
+
+<body>
+
+    <!-- 導航 -->
+    <nav th:replace="_fragments :: nav(2)"></nav>
+    <!-- 導航結束 -->
+
+
+    <!-- 中間內容 -->
+    <div class="m-padded-tb-large m-container">
+        <div class="ui cotainer">
+            <!-- 分類標題 -->
+            <div class="ui top attached segment">
+                <div class="ui middle alignedd two column grid">
+                    <div class="column">
+                        <h3 class="ui teal header">分類</h3>
+                    </div>
+                    <div class="right aligned column">
+                        共<h2 class="ui orange header m-inline-block m-text-thin">18</h2>個
+                    </div>
+                </div>
+            </div>
+
+            <!-- 分類列表 -->
+            <div class="ui attached segment">
+                <div class="ui labeled button m-margin-tiny">
+                    <a href="#" class="ui basic teal button">思考邏輯</a>
+                    <div class="ui basic teal left pointing label">26</div>
+                </div>
+
+                <div class="ui labeled button m-margin-tiny">
+                    <a href="#" class="ui basic button">演算基礎</a>
+                    <div class="ui basic left pointing label">07</div>
+                </div>
+
+                <div class="ui labeled button m-margin-tiny">
+                    <a href="#" class="ui basic button">資料結構</a>
+                    <div class="ui basic left pointing label">27</div>
+                </div>
+
+                <div class="ui labeled button m-margin-tiny">
+                    <a href="#" class="ui basic button">命題解析</a>
+                    <div class="ui basic left pointing label">11</div>
+                </div>
+
+                <div class="ui labeled button m-margin-tiny">
+                    <a href="#" class="ui basic button">穿搭品味</a>
+                    <div class="ui basic left pointing label">12</div>
+                </div>
+
+                <div class="ui labeled button m-margin-tiny">
+                    <a href="#" class="ui basic button">美食佳餚</a>
+                    <div class="ui basic left pointing label">52</div>
+                </div>
+
+                <div class="ui labeled button m-margin-tiny">
+                    <a href="#" class="ui basic button">美食佳餚</a>
+                    <div class="ui basic left pointing label">52</div>
+                </div>
+
+                <div class="ui labeled button m-margin-tiny">
+                    <a href="#" class="ui basic button">美食佳餚</a>
+                    <div class="ui basic left pointing label">52</div>
+                </div>
+
+                <div class="ui labeled button m-margin-tiny">
+                    <a href="#" class="ui basic button">美食佳餚</a>
+                    <div class="ui basic left pointing label">52</div>
+                </div>
+
+                <div class="ui labeled button m-margin-tiny">
+                    <a href="#" class="ui basic button">美食佳餚</a>
+                    <div class="ui basic left pointing label">52</div>
+                </div>
+
+                <div class="ui labeled button m-margin-tiny">
+                    <a href="#" class="ui basic button">美食佳餚</a>
+                    <div class="ui basic left pointing label">52</div>
+                </div>
+
+                <div class="ui labeled button m-margin-tiny">
+                    <a href="#" class="ui basic button">美食佳餚</a>
+                    <div class="ui basic left pointing label">52</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 文章列 -->
+        <div class="ui top attached segment">
+            <!-- 文章 -->
+            <div class="ui padded vertical segment m-padded-tb-large">
+                <div class="ui mobile reversed stackable grid">
+                    <div class="eleven wide column">
+                        <!-- 標題 -->
+                        <h3 class="ui header">如何泡一杯好的咖啡</h3>
+                        <!-- 摘要 -->
+                        <p class="m-text">
+                            咖啡樹原產於非洲亞熱帶地區，以及亞洲南部的一些島嶼。那些咖啡樹從非洲出口至世界各國，現時那些咖啡樹種植遍布超過70個國家，主要在美洲、東南亞、印度等赤道地區...
+                        </p>
+                        <!-- 下欄 -->
+                        <div class="ui stackable grid">
+                            <div class="eleven wide column">
+                                <div class="ui mini horizontal link list">
+                                    <div class="item">
+                                        <img src="https://picsum.photos/id/319/100/100" alt="" class="ui avatar image">
+                                        <div class="content"><a href="#" class="header">Yucheng</a></div>
+                                    </div>
+
+                                    <div class="item">
+                                        <i class="calendar alternate outline icon"></i> 2021-09-18
+                                    </div>
+
+                                    <div class="item">
+                                        <i class="eye icon"></i> 2348
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 標籤 -->
+                            <div class="right aligned five wide column">
+                                <a href="#" target="_blank" class="ui teal basic label m-padded-tiny">咖啡生活</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 右邊圖片 -->
+                    <div class="five wide column">
+                        <a href="#" target="_blank">
+                            <img src="https://picsum.photos/800/450?random=10" alt="" class="ui rounded image">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ui padded vertical segment m-padded-tb-large">
+                <div class="ui mobile reversed stackable grid">
+                    <div class="eleven wide column">
+                        <!-- 標題 -->
+                        <h3 class="ui header">如何泡一杯好的咖啡</h3>
+                        <!-- 摘要 -->
+                        <p class="m-text">
+                            咖啡樹原產於非洲亞熱帶地區，以及亞洲南部的一些島嶼。那些咖啡樹從非洲出口至世界各國，現時那些咖啡樹種植遍布超過70個國家，主要在美洲、東南亞、印度等赤道地區...
+                        </p>
+                        <!-- 下欄 -->
+                        <div class="ui stackable grid">
+                            <div class="eleven wide column">
+                                <div class="ui mini horizontal link list">
+                                    <div class="item">
+                                        <img src="https://picsum.photos/id/319/100/100" alt="" class="ui avatar image">
+                                        <div class="content"><a href="#" class="header">Yucheng</a></div>
+                                    </div>
+
+                                    <div class="item">
+                                        <i class="calendar alternate outline icon"></i> 2021-09-18
+                                    </div>
+
+                                    <div class="item">
+                                        <i class="eye icon"></i> 2348
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 標籤 -->
+                            <div class="right aligned five wide column">
+                                <a href="#" target="_blank" class="ui teal basic label m-padded-tiny">咖啡生活</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 右邊圖片 -->
+                    <div class="five wide column">
+                        <a href="#" target="_blank">
+                            <img src="https://picsum.photos/800/450?random=10" alt="" class="ui rounded image">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ui padded vertical segment m-padded-tb-large">
+                <div class="ui mobile reversed stackable grid">
+                    <div class="eleven wide column">
+                        <!-- 標題 -->
+                        <h3 class="ui header">如何泡一杯好的咖啡</h3>
+                        <!-- 摘要 -->
+                        <p class="m-text">
+                            咖啡樹原產於非洲亞熱帶地區，以及亞洲南部的一些島嶼。那些咖啡樹從非洲出口至世界各國，現時那些咖啡樹種植遍布超過70個國家，主要在美洲、東南亞、印度等赤道地區...
+                        </p>
+                        <!-- 下欄 -->
+                        <div class="ui stackable grid">
+                            <div class="eleven wide column">
+                                <div class="ui mini horizontal link list">
+                                    <div class="item">
+                                        <img src="https://picsum.photos/id/319/100/100" alt="" class="ui avatar image">
+                                        <div class="content"><a href="#" class="header">Yucheng</a></div>
+                                    </div>
+
+                                    <div class="item">
+                                        <i class="calendar alternate outline icon"></i> 2021-09-18
+                                    </div>
+
+                                    <div class="item">
+                                        <i class="eye icon"></i> 2348
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 標籤 -->
+                            <div class="right aligned five wide column">
+                                <a href="#" target="_blank" class="ui teal basic label m-padded-tiny">咖啡生活</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 右邊圖片 -->
+                    <div class="five wide column">
+                        <a href="#" target="_blank">
+                            <img src="https://picsum.photos/800/450?random=10" alt="" class="ui rounded image">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ui padded vertical segment m-padded-tb-large">
+                <div class="ui mobile reversed stackable grid">
+                    <div class="eleven wide column">
+                        <!-- 標題 -->
+                        <h3 class="ui header">如何泡一杯好的咖啡</h3>
+                        <!-- 摘要 -->
+                        <p class="m-text">
+                            咖啡樹原產於非洲亞熱帶地區，以及亞洲南部的一些島嶼。那些咖啡樹從非洲出口至世界各國，現時那些咖啡樹種植遍布超過70個國家，主要在美洲、東南亞、印度等赤道地區...
+                        </p>
+                        <!-- 下欄 -->
+                        <div class="ui stackable grid">
+                            <div class="eleven wide column">
+                                <div class="ui mini horizontal link list">
+                                    <div class="item">
+                                        <img src="https://picsum.photos/id/319/100/100" alt="" class="ui avatar image">
+                                        <div class="content"><a href="#" class="header">Yucheng</a></div>
+                                    </div>
+
+                                    <div class="item">
+                                        <i class="calendar alternate outline icon"></i> 2021-09-18
+                                    </div>
+
+                                    <div class="item">
+                                        <i class="eye icon"></i> 2348
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 標籤 -->
+                            <div class="right aligned five wide column">
+                                <a href="#" target="_blank" class="ui teal basic label m-padded-tiny">咖啡生活</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 右邊圖片 -->
+                    <div class="five wide column">
+                        <a href="#" target="_blank">
+                            <img src="https://picsum.photos/800/450?random=10" alt="" class="ui rounded image">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ui padded vertical segment m-padded-tb-large">
+                <div class="ui mobile reversed stackable grid">
+                    <div class="eleven wide column">
+                        <!-- 標題 -->
+                        <h3 class="ui header">如何泡一杯好的咖啡</h3>
+                        <!-- 摘要 -->
+                        <p class="m-text">
+                            咖啡樹原產於非洲亞熱帶地區，以及亞洲南部的一些島嶼。那些咖啡樹從非洲出口至世界各國，現時那些咖啡樹種植遍布超過70個國家，主要在美洲、東南亞、印度等赤道地區...
+                        </p>
+                        <!-- 下欄 -->
+                        <div class="ui stackable grid">
+                            <div class="eleven wide column">
+                                <div class="ui mini horizontal link list">
+                                    <div class="item">
+                                        <img src="https://picsum.photos/id/319/100/100" alt="" class="ui avatar image">
+                                        <div class="content"><a href="#" class="header">Yucheng</a></div>
+                                    </div>
+
+                                    <div class="item">
+                                        <i class="calendar alternate outline icon"></i> 2021-09-18
+                                    </div>
+
+                                    <div class="item">
+                                        <i class="eye icon"></i> 2348
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 標籤 -->
+                            <div class="right aligned five wide column">
+                                <a href="#" target="_blank" class="ui teal basic label m-padded-tiny">咖啡生活</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 右邊圖片 -->
+                    <div class="five wide column">
+                        <a href="#" target="_blank">
+                            <img src="https://picsum.photos/800/450?random=10" alt="" class="ui rounded image">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ui padded vertical segment m-padded-tb-large">
+                <div class="ui mobile reversed stackable grid">
+                    <div class="eleven wide column">
+                        <!-- 標題 -->
+                        <h3 class="ui header">如何泡一杯好的咖啡</h3>
+                        <!-- 摘要 -->
+                        <p class="m-text">
+                            咖啡樹原產於非洲亞熱帶地區，以及亞洲南部的一些島嶼。那些咖啡樹從非洲出口至世界各國，現時那些咖啡樹種植遍布超過70個國家，主要在美洲、東南亞、印度等赤道地區...
+                        </p>
+                        <!-- 下欄 -->
+                        <div class="ui stackable grid">
+                            <div class="eleven wide column">
+                                <div class="ui mini horizontal link list">
+                                    <div class="item">
+                                        <img src="https://picsum.photos/id/319/100/100" alt="" class="ui avatar image">
+                                        <div class="content"><a href="#" class="header">Yucheng</a></div>
+                                    </div>
+
+                                    <div class="item">
+                                        <i class="calendar alternate outline icon"></i> 2021-09-18
+                                    </div>
+
+                                    <div class="item">
+                                        <i class="eye icon"></i> 2348
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 標籤 -->
+                            <div class="right aligned five wide column">
+                                <a href="#" target="_blank" class="ui teal basic label m-padded-tiny">咖啡生活</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 右邊圖片 -->
+                    <div class="five wide column">
+                        <a href="#" target="_blank">
+                            <img src="https://picsum.photos/800/450?random=10" alt="" class="ui rounded image">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 文章列底 -->
+        <div class="ui bottom attached segment">
+            <div class="ui middle aligned two column grid">
+                <div class="column">
+                    <a href="#" class="ui mini teal button">上一頁</a>
+                </div>
+                <div class="right aligned column">
+                    <a href="#" class="ui mini teal button">下一頁</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 中間內容結束 -->
+
+
+    <!-- 頁尾 -->
+    <footer th:replace="_fragments :: footer"></footer>
+    <!-- 頁尾結束 -->
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+
+    <script>
+        $('.menu.toggle').click(function () {
+            $('.m-item').toggleClass('m-mobile-hide');
+        })
+    </script>
+</body>
+
+</html>
