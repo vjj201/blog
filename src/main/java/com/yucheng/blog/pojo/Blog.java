@@ -28,6 +28,7 @@ public class Blog {
     private String content;
 
     @Column(name = "firstPicture")
+    @Lob
     private String firstPicture;
 
     @Column(name = "flag")

@@ -2,6 +2,7 @@ package com.yucheng.blog.service;
 
 import com.yucheng.blog.pojo.Blog;
 import com.yucheng.blog.vo.BlogQuery;
+import javassist.NotFoundException;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
@@ -32,5 +33,7 @@ public interface BlogService {
     //刪除
     void deleteBlog(Long id);
 
+    //查詢並轉換
+    Blog getAndConvert(Long id) throws NotFoundException;
 
 }

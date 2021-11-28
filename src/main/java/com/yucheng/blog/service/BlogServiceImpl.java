@@ -3,7 +3,10 @@ package com.yucheng.blog.service;
 import com.yucheng.blog.dao.BlogRepository;
 import com.yucheng.blog.pojo.Blog;
 import com.yucheng.blog.pojo.Type;
+import com.yucheng.blog.util.MarkdownUtils;
 import com.yucheng.blog.vo.BlogQuery;
+import javassist.NotFoundException;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -95,9 +98,11 @@ public class BlogServiceImpl implements BlogService {
             blog.setUpdateTime(new Date());
             blog.setViews(0);
         } else {
+            Blog b = blogRepository.findById(blog.getId()).orElse(null);
+            blog.setCreateTime(b.getCreateTime());
+            blog.setViews(b.getViews());
             blog.setUpdateTime(new Date());
         }
-
 
         return blogRepository.save(blog);
     }
@@ -118,5 +123,21 @@ public class BlogServiceImpl implements BlogService {
     @Transactional
     public void deleteBlog(Long id) {
         blogRepository.deleteById(id);
+    }
+
+    @Transactional
+    @Override
+    public Blog getAndConvert(Long id) throws NotFoundException {
+        Blog blog = blogRepository.findById(id).orElse(null);
+        if (blog == null) {
+            throw new NotFoundException("文章不存在");
+        }
+        Blog b = new Blog();
+        BeanUtils.copyProperties(blog,b);
+        String content = b.getContent();
+        b.setContent(MarkdownUtils.markdownToHtmlExtensions(content));
+
+        blogRepository.updateViews(id);
+        return b;
     }
 }
