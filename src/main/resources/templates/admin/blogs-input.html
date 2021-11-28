@@ -142,7 +142,7 @@
 
                 <!-- 提交選項 -->
                 <div class="ui right aligned container">
-                    <button class="ui button" onclick="window.history.go(-1)">返回</button>
+                    <a id="back" class="ui button" th:href="@{/admin/blogs}">返回</a>
                     <button type="button" id="save-btn" class="ui secondary button">保存</button>
                     <button type="button" id="publish-btn" class="ui teal button">發布</button>
                 </div>
