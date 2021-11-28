@@ -25,6 +25,9 @@ public interface TagService {
     //顯示標籤列表
     Page<Tag> listTag(Pageable pageable);
 
+    //筆數顯示
+    List<Tag> listTag(Integer size);
+
     //修改標籤
     Tag updateTag(Long id, String name);
 

@@ -38,7 +38,9 @@ public class BlogController {
 
     //跳轉文章列表頁，並加載分類清單
     @GetMapping("/blogs")
-    public String blogs(@PageableDefault(size = 5, sort = {"updateTime"}) Pageable pageable, BlogQuery blogQuery, Model model) {
+    public String blogs(@PageableDefault(size = 5, sort = {"updateTime"}) Pageable pageable,
+                        BlogQuery blogQuery,
+                        Model model) {
         model.addAttribute("types", typeService.listType());
         model.addAttribute("page", blogService.listBlog(pageable, blogQuery));
         return "/admin/blogs";

@@ -4,7 +4,9 @@ import com.yucheng.blog.dao.TypeRepository;
 import com.yucheng.blog.pojo.Type;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -16,7 +18,7 @@ import java.util.List;
  */
 
 @Service
-public class TypeServiceImpl implements TypeService{
+public class TypeServiceImpl implements TypeService {
 
     @Autowired
     private TypeRepository typeRepository;
@@ -47,13 +49,18 @@ public class TypeServiceImpl implements TypeService{
         return typeRepository.findAll();
     }
 
+    public List<Type> listType(Integer size) {
+        Pageable pageable =  PageRequest.of(0, size, Sort.by(Sort.Direction.DESC, "blogs.size"));
+        return typeRepository.findTop(pageable);
+    }
+
     @Override
     @Transactional
     public Type updateType(Long id, String name) {
         Type type = typeRepository.findById(id).orElse(null);
 
-        if(type == null) {
-           return null;
+        if (type == null) {
+            return null;
         }
         type.setName(name);
         return typeRepository.save(type);

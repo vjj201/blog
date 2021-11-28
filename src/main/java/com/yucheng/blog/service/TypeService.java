@@ -24,6 +24,9 @@ public interface TypeService {
     //顯示分頁類表
     Page<Type> listType(Pageable pageable);
 
+    //顯示指定筆數
+    List<Type> listType(Integer size);
+
     //查詢全部
     List<Type> listType();
 
